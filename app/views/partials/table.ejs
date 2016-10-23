@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-10">
+        <h1>User Table</h1>
+        <table class="table table-hover">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+            <!-- Check for DB connection error or empty DB -->
+            <% if (getError !== '') { %>
+                <tr>
+                    <td colspan="3" >Error connecting to DB: <%= getError.code %></td>
+                </tr>
+            <% } else if (Object.keys(getResult).length === 0) {%>
+                <td colspan="3" >Database is empty. Click add to insert new user. </td>
+            <!-- Display DB Select * Query -->
+            <% } else if (getResult !== '') { %>
+                <% getResult.forEach(function(item) { %>
+                <tr>
+                    <td>
+                        <input id="<%= item.userId %>" readonly="readonly" value="<%= item.firstName %>" name="firstName" class="form-control" ></input>
+                    </td>
+                    <td>
+                        <input id="<%= item.userId %>" readonly="readonly" value="<%= item.lastName %>" name="lastName" class="form-control" ></input>
+                    </td>
+                    <td>
+                        <input id="<%= item.userId %>" readonly="readonly" value="<%= item.email %>" name="email" class="form-control" ></input>
+                    </td>
+                    <td>
+                        <button id="<%= item.userId %>" name="delete" class="btn-sm glyphicon glyphicon-remove"></button>
+                        <button id="<%= item.userId %>" name="edit" class="btn-sm glyphicon glyphicon-pencil"></button>
+                        <button id="<%= item.userId %>" name="save" class="btn-sm glyphicon glyphicon-ok"></button>
+                    </td>
+                </tr>
+                <% }); %>
+            <% } %>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <a href="/adduser" class="btn btn-default">Add new User</a>
+    </div>
+</div>
+<!-- Display DB Update and Delete Results -->
+<div class="row extra-margin-top">
+    <div class="col-md-6">
+        <label class="control-label" id="updateResult"></label>
+    </div>
+</div>
+
+

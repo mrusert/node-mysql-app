@@ -1,0 +1,7 @@
+button[name=save] {
+	display: none;
+}
+
+.extra-margin-top {
+	margin-top: 10px;
+}

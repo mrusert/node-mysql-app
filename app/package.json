@@ -1,0 +1,31 @@
+{
+  "name": "node-mysql-app",
+  "version": "1.0.0",
+  "description": "Node mysql app to store form data",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrusert/node-mysql-app.git"
+  },
+  "keywords": [
+    "node",
+    "mysql",
+    "javascript",
+    "forms"
+  ],
+  "author": "mrusert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrusert/node-mysql-app/issues"
+  },
+  "homepage": "https://github.com/mrusert/node-mysql-app#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "mysql": "^2.11.1"
+  }
+}
