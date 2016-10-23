@@ -6,5 +6,5 @@ This is a simple node web app that uses express.js and mysql to create a simple 
 - Body Parser URL encoding
 - MySQL Database
 
-jQuery used for client side editing and AJAX calls.  
+MAMP stack used for local DB server and jQuery used for client side editing and AJAX calls.  
 
