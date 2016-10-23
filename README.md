@@ -1,0 +1,9 @@
+# Node CRUD App using Express and MySQL
+
+This is a simple node web app that uses express.js and mysql to create a simple CRUD app with a web interface.  The following node packages are used for the application: 
+- Express.js File Server
+- EJS templating
+- MySQL DB
+
+jQuery used for client side editing and AJAX calls.  
+
